@@ -1,0 +1,22 @@
+ALGORITHM algos_checkpoint
+VAR
+    sentence : STRING := [100]
+    countS : INTEGER
+    countW : INTEGER := 1
+    i, countV: INTEGER := 0
+BEGIN
+    write(enter a sentence with no more than 100 char)   // ask the user to write a sentence
+    read(sentence)
+FOR i FROM 0 TO sentence.length -1 STEP 1  DO
+    countS := sentence.length                            //will give the sentence length
+    IF (sentence[i] = " ") THEN                          //will give number of words
+        countW := countW + 1                             // will give us 5 spaces + 1 to give number of words
+    END_IF
+    IF (sentence[i] = "a" OR "e" OR "i" OR "o" OR "u" OR "y" OR "A" OR "E" OR "I" OR "O" OR "U" OR "Y") THEN
+        countV = countV + 1                              //will give the number of vowels
+    END_IF
+END_FOR
+write(sentence.length)
+write(countW)
+write(countV)
+END
